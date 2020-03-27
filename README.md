@@ -426,22 +426,24 @@ OUTPUT
 Enter value of i 20
 1 1 2 3 5 8 13 21
 ~~~
-# PROGRAM No 17:- Write a computer program in C, which take integer input from user. If entered value > 10, it will call a function, which prints multiplication table of of entered number, from 1 to 10, in following format:
+# PROGRAM No:-17 Write a computer program in C, which take integer input from user. If entered value > 10, it will call a function, which prints multiplication table of of entered number, from 1 to 10, in following format:
 
-1 x 7 = 7
+ 1 x 7 = 7
 
-2 x 7 = 14
+ 2 x 7 = 14
 
-If entered value is between 6 to 10, then will be call another function, which print number of lines equal to entered number in following pattern:
+ If entered value is between 6 to 10, then will be call another function, which print number of lines equal to entered number in following pattern:
 
-    #
-   #.#
-  #...#
- #.....#
-#.......#
-for any other input it will display:
+           #
+          #.#
+         #...#
+        #.....#
+       #.......#
+ 
+ for any other input it will display:
 
-Have a nice day!
+ Have a nice day!
+
 ~~~C
 #include<stdio.h>
 int main()
@@ -500,10 +502,10 @@ void print()
 {
 printf("Have a nice day!");
  }
- ~~~
- ````
- Output:
- ~~~
+~~~
+
+OUTPUT
+~~~
 3
 
 Have a nice day!
