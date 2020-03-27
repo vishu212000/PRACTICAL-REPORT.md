@@ -523,76 +523,58 @@ Have a nice day!
 
 2 x 7 = 14
 ~~~
-# PROGRAM No 18:-PROGRAM TO PRINT A TWO MATRIX
+# PROGRAM No 18:-Design a code to mark 'Present' if student entered in a hall before 8:35 and marked 'Late' before 8:45 otherwise marked 'Absent'.
+
+If user will enter the time between 8:00 - 8:14 then display a message 'Sorry Gate closed' and if user will enter the time less than 8:00 then display a message 'Its wrong Time'.
 ~~~C
 #include<stdio.h>
 int main()
 {
-int a[3][3],b[3][3],i,j;
-printf("Enter matrix a");
-for(i=0;i<=2;i++)
-{
-for(j=0;j<=2;j++)
-scanf("%d",&a[i][j]);
-}
-printf("Enter matrix b");
-for (i=0;i<=2;i++)
-{
-for(j=0;j<=2;j++)
-scanf("%d",&b[i][j]);
-}
-printf("Matrix a\n");
-for(i=0;i<=2;i++)
-{
-for(j=0;j<=2;j++)
-printf("%d ",a[i][j]);
-printf("\n");
-}
-printf("\n");
-printf("Matrix b\n");
-for(i=0;i<=2;i++)
-{
-for(j=0;j<=2;j++)
-printf("%d ",b[i][j]);
-printf("\n");
-}
-printf("\n");
-return 0;
+    float time;
+    //time should be in the format of hh.mm
+    scanf(" %f",&time);
+    if(time>8.14 && time<8.36)
+    printf("Present");
+    else
+    {
+        if(time>=8.36 && time<=8.45)
+        printf("Late");
+        else
+        {
+            if(time>8.45 && time<9.00)
+            printf("Absent");
+            else
+            {
+                if(time==8.00 && time<=8.14)
+                printf("Sorry Gate closed");
+                else
+                {
+                    if(time>7.00 && time<8.00)
+                printf("You entered wrong Time");
+                    else
+                    {
+                        if(time>=9.00)
+                        printf("Sorry Gate closed");
+                        else
+                        {
+                            if(time>=1.00 && time<=7.00)
+                            printf("Wrong Timing");
+                        }
+                    }
+                }
+            }
+            
+        }
+        
+    }
+    return 0;
 }
 ~~~
 OUTPUT
 ~~~
-  Enter matrix a
-1
-2
-3
-4
-5
-6
-7
-8
-9
-Enter matrix b
-1
-2
-3
-4
-5
-6
-7
-8
-9
-Matrix a
-1 2 3 
-4 5 6 
-7 8 9 
-
-Matrix b
-1 2 3 
-4 5 6 
-7 8 9
+10.00                                                                             
+Sorry Gate closed                                                               
 ~~~
-
 # PROGRAM No 19:-PROGRAM TO ADD TWO MATRIX
 ~~~C
 #include <stdio.h>
