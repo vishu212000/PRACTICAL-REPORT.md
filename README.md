@@ -426,45 +426,100 @@ OUTPUT
 Enter value of i 20
 1 1 2 3 5 8 13 21
 ~~~
-# PROGRAM No 17:-PROGRAM TO ENTER AND PRINT 10 ELEMENTS USING 1-D ARRAY
+# PROGRAM No 17:- Write a computer program in C, which take integer input from user. If entered value > 10, it will call a function, which prints multiplication table of of entered number, from 1 to 10, in following format:
+
+1 x 7 = 7
+
+2 x 7 = 14
+
+If entered value is between 6 to 10, then will be call another function, which print number of lines equal to entered number in following pattern:
+
+    #
+   #.#
+  #...#
+ #.....#
+#.......#
+for any other input it will display:
+
+Have a nice day!
 ~~~C
-#include <stdio.h>
+#include<stdio.h>
 int main()
 {
-        char name[10];
-        int marks;
-        int i;
-        for (i=0;i<10;i++)
-        {
-                printf("enter name ");
-                scanf("%s",&name);
-                printf("enter marks ");
-                scanf("%d",&marks);
-        }
+int num;
+printf("\n\tEnter a number\n");
+scanf("%d",&num);
+if(num>10)
+  {
+int table();
+ table(num);
+  }
+else
+  {
+  if(num>=6 && num<=10)
+   {
+int pattern();
+  pattern(num);
+   }
+   else
+   {
+ void print();
+print();
+   }
+  }
+return 0;
 }
-~~~
-OUTPUT
-~~~
-enter name a 
-enter marks 1
-enter name b
-enter marks 2
-enter name c
-enter marks 3
-enter name d
-enter marks 4
-enter name e
-enter marks 5
-enter name f
-enter marks 6
-enter name g
-enter marks 7
-enter name h
-enter marks 8
-enter name i
-enter marks 9
-enter name j
-enter marks 10
+   
+int table(int a)
+{
+int i,table;
+for(i=1;i<=10;i++)
+printf("%d X %d=%d \n",i,a,i*a);
+}
+  
+  int pattern(int b)
+  {
+  int i,j;
+  for(i=1;i<=b;i++)
+  {
+  for(j=1;j<=b;j++)
+    {
+  if(j==1 || j==i)
+   printf("*");
+  else
+   if(j>=2 && j<=i-1)
+   printf(".");
+  else
+  printf(" "); 
+  }
+  printf("\n");
+ }
+}
+  
+void print()
+{
+printf("Have a nice day!");
+ }
+ ~~~
+ ````
+ Output:
+ ~~~
+3
+
+Have a nice day!
+
+7
+
+    #
+   #.#
+  #...#
+ #.....#
+#.......#
+12
+
+1 x 7 = 7
+
+2 x 7 = 14
 ~~~
 # PROGRAM No 18:-PROGRAM TO PRINT A TWO MATRIX
 ~~~C
@@ -535,6 +590,7 @@ Matrix b
 4 5 6 
 7 8 9
 ~~~
+
 # PROGRAM No 19:-PROGRAM TO ADD TWO MATRIX
 ~~~C
 #include <stdio.h>
